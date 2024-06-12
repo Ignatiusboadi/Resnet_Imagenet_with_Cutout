@@ -17,13 +17,20 @@ class ImageNet(Dataset):
             self.val_to_syn = json.load(json_file)
         samples_dir = os.path.join(root, "ILSVRC/Data/CLS-LOC", split)
         for entry in os.listdir(samples_dir):
-            # looping through images folders for training images set
+            # looping through images folders for training imageset
             if split == "train" and entry != ".DS_Store":  # skipping the .DS_Store file in mac folders
                 class_index = entry
                 target = self.class_indices[class_index]
                 syn_folder = os.path.join(samples_dir, class_index)
-                for sample in os.lisdir(syn_folder):
+                for sample in os.listdir(syn_folder):
                     sample_path = os.path.join(syn_folder, sample)
                     self.samples.append(sample_path)
                     self.targets.append(target)
+            # looping through images folder for validation imageset.
+            elif split == 'val' and entry != '.DS_Store':
+                class_index = self.val_to_syn[entry]
+                target = self.class_indices[class_index]
+                sample_path = os.path.join(samples_dir, entry)
+                self.samples.append(sample_path)
+                self.targets.append(target)
 
