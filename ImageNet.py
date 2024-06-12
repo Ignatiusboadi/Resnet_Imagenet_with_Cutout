@@ -1,11 +1,13 @@
 import json
 import os
+from PIL import Image
 from torch.utils.data import Dataset
 
 
 class ImageNet(Dataset):
     def __init__(self, root, split, transform=None):
         super().__init__()
+        self.transform = transform
         self.samples = []  # list of images
         self.targets = []  # list of labels of images
         self.class_indices = {}  # dictionary mapping class_ids and a class index
@@ -33,4 +35,14 @@ class ImageNet(Dataset):
                 sample_path = os.path.join(samples_dir, entry)
                 self.samples.append(sample_path)
                 self.targets.append(target)
+
+    def __len__(self):
+        return len(self.samples)
+
+    def __getitem__(self, index):
+        x = Image.open(self.samples[index]).convert("RGB")
+        if self.transform:
+            x = self.transform(x)
+        return x, self.targets[index]
+
 
