@@ -65,3 +65,10 @@ class PlainConvNet(nn.Module):
         x = self.fc(x)
         x = self.log_softmax(x)
         return x
+
+
+# Replace with path of folder containing Imagenet dataset folder
+root = "/Users/ignatiusboadi/Documents/AMMI/Computer Vision/ImageNet and Resnet18/"
+
+# Load dataset
+
