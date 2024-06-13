@@ -1,12 +1,9 @@
-import numpy as np
-import os
 import torch
 
 from torch import nn, optim
 from torch.utils.data import DataLoader
 from torchvision.transforms import transforms
 from ImageNet import ImageNet
-from tqdm import tqdm
 
 
 class BasicBlock(nn.Module):
@@ -112,7 +109,6 @@ val_dataloader = DataLoader(
         )
 
 
-# Training and validation code
 def train(model, train_loader, criterion, optimizer, device):
     model.train()
     running_loss = 0.0
