@@ -15,9 +15,9 @@ class ImageNet(Dataset):
             class_index_file = json.load(json_file)
             for class_id, class_items in class_index_file.items():
                 self.class_indices[class_items[0]] = int(class_id)
-        with open(os.path.join(root, "Resnet18_Imagenet/ILSVRC2012_val_labels.json", split)) as json_file:
+        with open(os.path.join(root, "Resnet18_Imagenet/ILSVRC2012_val_labels.json")) as json_file:
             self.val_to_syn = json.load(json_file)
-        samples_dir = os.path.join(root, "ILSVRC/Data/CLS-LOC", split)
+        samples_dir = os.path.join(root, "imagenet-object-localization-challenge/ILSVRC/Data/CLS-LOC", split)
         for entry in os.listdir(samples_dir):
             # looping through images folders for training imageset
             if split == "train" and entry != ".DS_Store":  # skipping the .DS_Store file in mac folders
