@@ -11,11 +11,11 @@ class ImageNet(Dataset):
         self.samples = []  # list of images
         self.targets = []  # list of labels of images
         self.class_indices = {}  # dictionary mapping class_ids and a class index
-        with open(os.path.join(root, "imagenet_class_index.json"), "rb") as json_file:
+        with open(os.path.join(root, "Resnet18_Imagenet/imagenet_class_index.json"), "rb") as json_file:
             class_index_file = json.load(json_file)
             for class_id, class_items in class_index_file.items():
                 self.class_indices[class_items[0]] = int(class_id)
-        with open(os.path.join(root, "ILSVRC/Data/CLS-LOC", split)) as json_file:
+        with open(os.path.join(root, "Resnet18_Imagenet/ILSVRC2012_val_labels.json", split)) as json_file:
             self.val_to_syn = json.load(json_file)
         samples_dir = os.path.join(root, "ILSVRC/Data/CLS-LOC", split)
         for entry in os.listdir(samples_dir):
