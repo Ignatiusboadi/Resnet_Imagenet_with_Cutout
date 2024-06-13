@@ -84,7 +84,7 @@ train_dataset = ImageNet(root, "train", train_transform)
 train_dataloader = DataLoader(
             train_dataset,
             batch_size=64,
-            num_workers=8,
+            num_workers=4,
             shuffle=False,
             drop_last=False,
             pin_memory=True
@@ -102,7 +102,7 @@ val_dataset = ImageNet(root, "val", val_transform)
 val_dataloader = DataLoader(
             val_dataset,
             batch_size=64,
-            num_workers=8,
+            num_workers=4,
             shuffle=False,
             drop_last=False,
             pin_memory=True
