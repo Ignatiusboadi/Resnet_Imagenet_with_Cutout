@@ -34,3 +34,27 @@ Cutout augmentation is a technique used in image data augmentation where random 
 
 <img width="277" alt="Screenshot 2024-06-19 at 22 41 52" src="https://github.com/Ignatiusboadi/Resnet_Imagenet_with_Cutout/assets/102676168/2b5a2b9d-6406-47fe-9a4c-74cde390e193">
 
+
+## Result 
+in this poject we compares the performance of three convolutional neural network architectures created for image classification: Plain ConvNet, ResNet-18, and ResNet-18 with Cutout. The evaluation focuses on their training dynamics, final validation metrics, and the impact of augmentation strategies on model performance.
+
+## Models Created
+
+### 1. Plain ConvNet
+
+- Started with a high initial loss of 11.02.
+- Plateaued in performance after epoch 10 with a final validation loss of 11%, indicating poor generalization.
+- Highlighted the challenges of deep networks without effective optimization strategies.
+
+### 2. ResNet-18
+
+- Initially exhibited instability with a high loss of 6.9 but improved steadily.
+- Achieved a final validation loss of 4.3 and a validation accuracy of 39%.
+- Demonstrated robust learning and effective classification capabilities compared to Plain ConvNet.
+
+### 3. ResNet-18 with Cutout
+
+- Implemented with cutout data augmentation to enhance robustness and generalization.
+- Showed significant improvement early in training, achieving a validation accuracy of 46.28% by epoch 10.
+- Highlighted the effectiveness of cutout augmentation in improving model performance and potential for further optimization.
+
