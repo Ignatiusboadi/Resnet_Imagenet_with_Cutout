@@ -13,7 +13,6 @@ Ensure you have the following installed:
 - matplotlib
 - tqdm
 
-# Image Classification with Custom ResNet
 
 ## Model Architecture
 Custom ResNet
