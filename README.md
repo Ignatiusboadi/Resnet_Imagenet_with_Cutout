@@ -23,7 +23,7 @@ Before the introduction of ReNet architecture, traditional neural network archit
 ## ReNet Architecture
 
 ReNet architecture was developed to address these issues, enabling the training of much deeper neural networks by mitigating the vanishing gradient problem. ReNet introduced various innovations that helped in maintaining effective gradient flow, thus allowing for the training of networks with significantly more layers without the degradation in performance that was previously observed.
-##Importance of Skip Connections
+## Importance of Skip Connections
 
 Skip connections, also known as identity shortcuts, play a pivotal role in deep learning models like ReNet and ResNet by addressing the vanishing gradient problem. By allowing gradients to flow more effectively through the network, skip connections ensure that earlier layers receive meaningful updates during training, thereby mitigating the issue of gradients diminishing to insignificance. This not only improves the training efficiency by enabling more efficient kernel learning across layers but also enhances the model's capability to extract complex features from the data. Furthermore, skip connections enable the training of deeper networks without compromising performance, leading to more sophisticated and accurate predictive models.
 
