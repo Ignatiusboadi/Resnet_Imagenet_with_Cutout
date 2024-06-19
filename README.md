@@ -1,8 +1,8 @@
 # Resnet_Imagenet_with_Cutout
 
 
-## Overview
-
+## Overview of Resnet 
+ResNet, short for Residual Network, is a type of deep neural network architecture 
 in this roject we  explores the challenges faced by researchers prior to the advent of ReNet architecture in training deep neural networks with a higher number of layers. The primary obstacle was the vanishing gradient problem during the backpropagation process, which hindered the efficient updating of kernel values once the network's layers exceeded a certain threshold.
 
 ## Vanishing Gradient Problem
