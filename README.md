@@ -15,7 +15,8 @@ Before the introduction of ReNet architecture, traditional neural network archit
 
 ## Graph: Training and Testing Error
 
-![Training and Testing Error](path/to/graph.png)
+<img width="755" alt="Screenshot 2024-06-19 at 22 17 02" src="https://github.com/Ignatiusboadi/Resnet_Imagenet_with_Cutout/assets/102676168/d188c74f-8ca2-4ff5-b202-249a6d7c50cd">
+
 
 *Figure 1: Training and Testing Error Comparison Between 20-layer and 56-layer Models*
 
