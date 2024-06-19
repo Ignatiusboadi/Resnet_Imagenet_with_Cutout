@@ -27,3 +27,7 @@ ReNet architecture was developed to address these issues, enabling the training 
 
 Skip connections, also known as identity shortcuts, play a pivotal role in deep learning models like ReNet and ResNet by addressing the vanishing gradient problem. By allowing gradients to flow more effectively through the network, skip connections ensure that earlier layers receive meaningful updates during training, thereby mitigating the issue of gradients diminishing to insignificance. This not only improves the training efficiency by enabling more efficient kernel learning across layers but also enhances the model's capability to extract complex features from the data. Furthermore, skip connections enable the training of deeper networks without compromising performance, leading to more sophisticated and accurate predictive models.
 
+## cutout data augmentation
+Data augmentation is one solution to avoid overfitting a training dataset of images. 
+
+Cutout augmentation is a technique used in image data augmentation where random square patches of pixels are masked out during training. This method helps in regularizing deep learning models by preventing overfitting and encouraging the learning of more robust features. By obscuring different parts of the images in each training iteration, cutout augmentation diversifies the training dataset and improves the model's ability to generalize to unseen data. It is a cost-effective and straightforward approach to enhancing the performance and robustness of image classification models.
